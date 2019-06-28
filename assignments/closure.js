@@ -1,6 +1,33 @@
 // ==== Challenge 1: Write your own closure ====
 // Write a simple closure of your own creation.  Keep it simple!
 
+lastName = 'Johnson';
+
+function grandfather(lastName) {
+  firstName = "John";
+  console.log('His name is' + firstName + lastName);
+  son(lastName);
+
+
+
+  function son (lastName){
+  firstName = "Jason";
+  console.log('His name is' + firstName + " " + lastName);
+  grandson(lastName);
+
+
+    function grandson (lastName){
+
+      firstName = "Jacob";
+      console.log('Hist name is' + firstName + " "  + lastName);
+      grandson(lastName);
+
+    }
+  }
+}
+grandfather(lastName);
+
+
 
 /* STRETCH PROBLEMS, Do not attempt until you have completed all previous tasks for today's project files */
 
