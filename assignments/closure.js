@@ -5,22 +5,21 @@ lastName = 'Johnson';
 
 function grandfather(lastName) {
   firstName = "John";
-  console.log('His name is' + firstName + lastName);
+  console.log('His name is' + " " + firstName +  " " + lastName);
   son(lastName);
 
 
 
   function son (lastName){
   firstName = "Jason";
-  console.log('His name is' + firstName + " " + lastName);
+  console.log('His name is' + " "  + firstName + " " + lastName);
   grandson(lastName);
 
 
     function grandson (lastName){
 
       firstName = "Jacob";
-      console.log('Hist name is' + firstName + " "  + lastName);
-      grandson(lastName);
+      console.log('Hist name is' + " " + firstName + " "  + lastName);
 
     }
   }
