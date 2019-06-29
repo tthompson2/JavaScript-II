@@ -25,14 +25,14 @@ const items = ['Pencil', 'Notebook', 'yo-yo', 'Gum'];
 */
 
 
-function getLength(arr, cb) {
+function getLength(items, cb) {
   // getLength passes the length of the array into the callback.
-  return cb(arr.getLength);
+  return cb(items.getLength);
 }
 
-function last(arr, cb) {
+function last(items, cb) {
   // last passes the last item of the array into the callback.
-  return cb(arr[arr.getLength]);
+  return cb(items[items.getLength]);
 }
 
 function sumNums(x, y, cb) {
@@ -47,14 +47,14 @@ function multiplyNums(x, y, cb) {
   return cb(x*y);
 }
 
-function contains(item, list, cb) {
-
-  return cb(item, list.find(function(item)) {
+//function contains(item, list, cb) {
+//
+  //return cb(item, list.find(function (item)) {
     
-  });
+ // });
   // contains checks if an item is present inside of the given array/list.
   // Pass true to the callback if it is, otherwise pass false.
-}
+//}
 
 /* STRETCH PROBLEM */
 
