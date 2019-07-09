@@ -98,7 +98,9 @@ console.log(largeShirts);
 let ticketPriceTotal = [];
 let total = 0;
 
-const totalDonations = ticketPriceTotal.reduce((total,item)=> total += item.donation,0);
+//
+
+const totalDonations = runners.reduce((total,item) => total += item.donation,0);
 console.log(totalDonations);
 
 // ==== Challenge 5: Be Creative ====
@@ -106,6 +108,38 @@ console.log(totalDonations);
 
 // Problem 1
 
+let extraLargeShirts = [];
+
+runners.filter (function(item) {
+ 
+   if(item.shirt_size === 'XL')
+   {
+       extraLargeShirts.push(item);
+   }
+
+})
+
+console.log(extraLargeShirts);
+
+
 // Problem 2
 
+let runnerEmailList= [];
+
+runners.forEach (function(item) {
+
+    runnerEmailList.push(item.email + ' ');
+})
+
+console.log(runnerEmailList);
+
 // Problem 3
+
+let shrink = [];
+
+runners.map(function(item){
+
+    shrink.push(item.first_name.toLowerCase() + ' ' + item.last_name.toLowerCase() + '!');
+});
+
+console.log(shrink);
