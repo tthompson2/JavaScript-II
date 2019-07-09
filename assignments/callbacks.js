@@ -62,4 +62,19 @@ function removeDuplicates(array, cb) {
   // removeDuplicates removes all duplicate values from the given array.
   // Pass the duplicate free array to the callback function.
   // Do not mutate the original array.
+
+  // I'm not sure how to test this, but the logic of it seems sound.
+  // I figured if I can pop of the element that is duplicated and not the one currently being tracked then the array shouldn't mess up?
+
+   newArray=array;
+
+   for(let i = 0; i < newArray.length; i++)
+   {
+      if(newarray[i] == newArray[i+1])
+      {
+        newarray.pop(newArray[i+1]);
+      }
+   }
+   
+  return(newarray, cb);
 }
