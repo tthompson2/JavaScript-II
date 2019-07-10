@@ -19,7 +19,7 @@ function grandfather(lastName) {
     function grandson (lastName){
 
       firstName = "Jacob";
-      console.log('Hist name is' + " " + firstName + " "  + lastName);
+      console.log('His name is' + " " + firstName + " "  + lastName);
 
     }
   }

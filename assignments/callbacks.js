@@ -30,10 +30,21 @@ function getLength(items, cb) {
   return cb(items.getLength);
 }
 
+getLength(items, function(length) {
+
+  console.log(length);
+
+});
+
 function last(items, cb) {
   // last passes the last item of the array into the callback.
   return cb(items[items.getLength]);
 }
+
+last(items, function(first) {
+
+  console.log;
+});
 
 function sumNums(x, y, cb) {
 

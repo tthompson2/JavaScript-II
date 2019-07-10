@@ -59,8 +59,7 @@ let fullName = [];
 
 runners.forEach(function(item){
 
-    fullName.push('First Name: ' + item.first_name);
-    fullName.push('Last Name: '+ item.last_name);
+    fullName.push('First Name: ' + item.first_name + 'Last Name: '+ item.last_name);
 
 });
  
@@ -69,25 +68,20 @@ console.log(fullName);
 
 // ==== Challenge 2: Use .map() ====
 // The event director needs to have all the runner's first names converted to uppercase because the director BECAME DRUNK WITH POWER. Convert each first name into all caps and log the result
-let allCaps = [];
+let allCaps = runners.map(function(item){
 
-runners.map(function(item){
+    return (item.first_name.toUpperCase());
 
-    allCaps.push(item.first_name.toUpperCase());
+    //allCaps.push(item.first_name.toUpperCase());
 });
 
 console.log(allCaps); 
 
 // ==== Challenge 3: Use .filter() ====
 // The large shirts won't be available for the event due to an ordering issue.  Get a list of runners with large sized shirts so they can choose a different size. Return an array named largeShirts that contains information about the runners that have a shirt size of L and log the result
-let largeShirts = [];
+let largeShirts = runners.filter(function(item) {
 
-runners.filter(function(item) {
-
-    if(item.shirt_size === 'L')
-    {
-        largeShirts.push(item);
-    }
+    return (item.shirt_size === 'L');
 
 })
 
@@ -98,9 +92,7 @@ console.log(largeShirts);
 let ticketPriceTotal = [];
 let total = 0;
 
-//
-
-const totalDonations = runners.reduce((total,item) => total += item.donation,0);
+const totalDonations = runners.reduce((total,item) => total += item.donation, 0);
 console.log(totalDonations);
 
 // ==== Challenge 5: Be Creative ====
@@ -108,16 +100,11 @@ console.log(totalDonations);
 
 // Problem 1
 
-let extraLargeShirts = [];
-
-runners.filter (function(item) {
+let extraLargeShirts = runners.filter (function(item) {
  
-   if(item.shirt_size === 'XL')
-   {
-       extraLargeShirts.push(item);
-   }
+    return(item.shirt_size === 'XL');
 
-})
+});
 
 console.log(extraLargeShirts);
 
@@ -135,11 +122,9 @@ console.log(runnerEmailList);
 
 // Problem 3
 
-let shrink = [];
+let shrink = runners.map(function(item){
 
-runners.map(function(item){
-
-    shrink.push(item.first_name.toLowerCase() + ' ' + item.last_name.toLowerCase() + '!');
+    return (item.first_name.toLowerCase() + ' ' + item.last_name.toLowerCase() + '!');
 });
 
 console.log(shrink);
