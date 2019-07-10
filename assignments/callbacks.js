@@ -27,7 +27,7 @@ const items = ['Pencil', 'Notebook', 'yo-yo', 'Gum'];
 
 function getLength(items, cb) {
   // getLength passes the length of the array into the callback.
-  return cb(items.getLength);
+  return cb(items.length);
 }
 
 getLength(items, function(length) {
@@ -38,12 +38,12 @@ getLength(items, function(length) {
 
 function last(items, cb) {
   // last passes the last item of the array into the callback.
-  return cb(items[items.getLength]);
+  return cb(items[items.length-1]);
 }
 
-last(items, function(first) {
+last(items, function(lastItem) {
 
-  console.log;
+  console.log(lastItem);
 });
 
 function sumNums(x, y, cb) {
@@ -52,11 +52,22 @@ function sumNums(x, y, cb) {
   // sumNums adds two numbers (x, y) and passes the result to the callback.
 }
 
+sumNums(3, 5, function(numberSum){
+
+  console.log(numberSum);
+});
+
 function multiplyNums(x, y, cb) {
   // multiplyNums multiplies two numbers and passes the result to the callback.
 
   return cb(x*y);
 }
+
+multiplyNums(3, 5, function(multiplySums){
+
+  console.log(multiplySums);
+
+});
 
 //function contains(item, list, cb) {
 //
