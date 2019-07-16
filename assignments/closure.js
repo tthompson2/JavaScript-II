@@ -3,7 +3,7 @@
 
 lastName = 'Johnson';
 
-function grandfather(lastName) {
+function grandfather (lastName) {
   firstName = "John";
   console.log('His name is' + " " + firstName +  " " + lastName);
   son(lastName);
@@ -35,14 +35,14 @@ grandfather(lastName);
 
 let countTotal = 0;
 
-const counter = () => {
+function counter () {
 
    countTotal++;
    return countTotal;
 
   // Return a function that when invoked increments and returns a counter variable.
 };
-const newCounter = counter();
+ const newCounter = counter();
  console.log(newCounter); // 1
  console.log(newCounter); // 2
 

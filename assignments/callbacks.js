@@ -30,7 +30,7 @@ function getLength(items, cb) {
   return cb(items.length);
 }
 
-getLength(items, function(length) {
+getLength(items, length => {
 
   console.log(length);
 
