@@ -5,21 +5,21 @@ const lastName = 'Johnson';
 
 function grandfather (lastName) {
   const firstName = "John";
-  console.log('His name is' + " " + firstName +  " " + lastName);
+  console.log(`His name is ${firstName} ${lastName}`);
   son(lastName);
 
 
 
   function son (lastName){
   const firstName = "Jason";
-  console.log('His name is' + " "  + firstName + " " + lastName);
+  console.log(`His name is ${firstName} ${lastName}`);
   grandson(lastName);
 
 
     function grandson (lastName){
 
       const firstName = "Jacob";
-      console.log('His name is' + " " + firstName + " "  + lastName);
+      console.log(`His name is ${firstName} ${lastName}`);
 
     }
   }

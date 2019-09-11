@@ -69,14 +69,16 @@ multiplyNums(3, 5, multiplySums => {
 
 });
 
-//function contains(item, list, cb) {
-//
-  //return cb(item, list.find(function (item)) {
+/*function contains(item, list, cb) {
+
+  return cb(item, list.find(function (item)) {
+
+    // can solve this using include function, but it definitely isn't solved yet.
     
- // });
+  }); 
   // contains checks if an item is present inside of the given array/list.
   // Pass true to the callback if it is, otherwise pass false.
-//}
+} */
 
 /* STRETCH PROBLEM */
 

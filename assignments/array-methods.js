@@ -59,7 +59,7 @@ let fullName = [];
 
 runners.forEach(item => {
 
-    fullName.push('First Name: ' + item.first_name + 'Last Name: '+ item.last_name);
+    fullName.push(`First Name: ${item.first_name} Last Name: ${item.last_name}`);
 
 });
  
