@@ -25,26 +25,60 @@ const items = ['Pencil', 'Notebook', 'yo-yo', 'Gum'];
 */
 
 
-function getLength(arr, cb) {
+function getLength(items, cb) {
   // getLength passes the length of the array into the callback.
+  return cb(items.length);
 }
 
-function last(arr, cb) {
+getLength(items, length => {
+
+  console.log(length);
+
+});
+
+function last(items, cb) {
   // last passes the last item of the array into the callback.
+  return cb(items[items.length-1]);
 }
+
+last(items, lastItem => {
+
+  console.log(lastItem);
+});
 
 function sumNums(x, y, cb) {
+
+  return cb(x+y);
   // sumNums adds two numbers (x, y) and passes the result to the callback.
 }
 
+sumNums(3, 5, numberSum =>{
+
+  console.log(numberSum);
+});
+
 function multiplyNums(x, y, cb) {
   // multiplyNums multiplies two numbers and passes the result to the callback.
+
+  return cb(x*y);
 }
 
-function contains(item, list, cb) {
+multiplyNums(3, 5, multiplySums => {
+
+  console.log(multiplySums);
+
+});
+
+/*function contains(item, list, cb) {
+
+  return cb(item, list.find(function (item)) {
+
+    // can solve this using include function, but it definitely isn't solved yet.
+    
+  }); 
   // contains checks if an item is present inside of the given array/list.
   // Pass true to the callback if it is, otherwise pass false.
-}
+} */
 
 /* STRETCH PROBLEM */
 
@@ -52,4 +86,19 @@ function removeDuplicates(array, cb) {
   // removeDuplicates removes all duplicate values from the given array.
   // Pass the duplicate free array to the callback function.
   // Do not mutate the original array.
+
+  // I'm not sure how to test this, but the logic of it seems sound.
+  // I figured if I can pop of the element that is duplicated and not the one currently being tracked then the array shouldn't mess up?
+
+   newArray=array;
+
+   for(let i = 0; i < newArray.length; i++)
+   {
+      if(newarray[i] == newArray[i+1])
+      {
+        newarray.pop(newArray[i+1]);
+      }
+   }
+   
+  return(newarray, cb);
 }
